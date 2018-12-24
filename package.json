@@ -1,0 +1,31 @@
+{
+  "name": "game",
+  "version": "1.0.0",
+  "description": "Final task for stage#2. Game 'Discord of centuries'",
+  "main": "app.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack-dev-server --mode development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolling-scopes-school/pavellyolya-2018Q3.git"
+  },
+  "author": "pavellyolya",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^2.0.2",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "path": "^0.12.7",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.13"
+  }
+}
