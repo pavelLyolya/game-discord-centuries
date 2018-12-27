@@ -1,5 +1,8 @@
 h1 {
     margin-bottom: 3%;
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: 10rem;
+    font-weight: 200;
 }
 
 .menu {
@@ -7,6 +10,9 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url(https://images.freecreatives.com/wp-content/uploads/2016/02/Wrapped-Old-Paper-Background-For-Free.jpg);
+    background-position: center;
+    background-size: 100% 100%;
 }
 
 menu {
