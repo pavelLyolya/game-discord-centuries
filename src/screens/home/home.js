@@ -1,14 +1,20 @@
 import './home.css';
 import template from './home.template';
 
+import Locations from '../choose-location/location';
+import drawSection from '../../scripts/drawSection';
+
 class Home {
-  static drawSection() {
-    const section = document.querySelector('section');
-    if (section) {
-      document.querySelector('#content').removeChild(section);
-    }
-    const content = document.querySelector('#content');
-    content.innerHTML = template;
+  static addClickListeners() {
+    const lis = document.querySelectorAll('menu li');
+    lis[0].addEventListener('click', () => {
+      Locations.draw();
+    });
+  }
+
+  static draw() {
+    drawSection(template);
+    Home.addClickListeners();
   }
 }
 
