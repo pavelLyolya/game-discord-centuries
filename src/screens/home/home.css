@@ -1,0 +1,30 @@
+h1 {
+    margin-bottom: 3%;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+menu {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.menu > menu {
+    list-style: none;
+    font-size: 7rem;
+}
+
+menu li {
+    transition-duration: 0.5s;
+}
+
+menu li:hover {
+    color: brown;
+    cursor: pointer;
+}

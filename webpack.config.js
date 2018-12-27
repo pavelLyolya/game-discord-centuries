@@ -9,7 +9,6 @@ const config = {
   },
   devServer: {
     overlay: true,
-    disableHostCheck: true, // untill fixing webpack's bag
   },
   module: {
     rules: [
