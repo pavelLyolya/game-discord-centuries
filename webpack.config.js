@@ -8,6 +8,8 @@ const config = {
     publicPath: 'dist/',
   },
   devServer: {
+    contentBase: path.resolve(__dirname, './dist/'),
+    compress: true,
     overlay: true,
   },
   module: {
