@@ -5,7 +5,6 @@ export default `
       <li>New game</li>
       <li>Scores</li>
       <li>Full screen</li>
-      <li>About</li>
     </menu>
   </section>
 `;
