@@ -1,15 +1,15 @@
 class Game {
   constructor() {
     this.playerName = '';
-    this.locationNumber = 0;
+    this.locationName = '';
   }
 
-  setLocationNumber(number) {
-    this.locationNumber = number;
+  setLocationName(name) {
+    this.locationName = `${name}.png`;
   }
 }
 
 const gameState = new Game();
-Object.freeze(gameState);
+// Object.freeze(gameState);
 
 export default gameState;
