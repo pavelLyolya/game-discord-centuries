@@ -7,12 +7,9 @@ body {
     margin: 0;
 }
 
-section {
+#content > section {
     width: 100%;
     height: 100vh;
-}
-
-.menu, .choose-location {
     position: relative;
     display: flex;
     flex-direction: column;
