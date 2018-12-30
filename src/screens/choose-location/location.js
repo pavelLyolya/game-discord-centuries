@@ -13,20 +13,26 @@ class Locations {
     location.classList.add('choosed');
   }
 
-  static chooseLocationListeners() {
-    const locationDivs = document.querySelectorAll('div.img');
-    locationDivs.forEach((location) => {
-      location.addEventListener('click', () => {
-        const locationName = location.firstElementChild.getAttribute('alt');
-        gameState.setLocationName(locationName);
-        Locations.makeChoosed(location);
+  static addChooseLocationListeners() {
+    return new Promise((resolve) => {
+      const locationDivs = document.querySelectorAll('div.img');
+      locationDivs.forEach((location) => {
+        location.addEventListener('click', () => {
+          const locationName = location.firstElementChild.getAttribute('alt');
+          gameState.setLocationName(locationName);
+          console.log(gameState); // for debug
+          Locations.makeChoosed(location);
+        });
+      });
+      document.querySelector('.choose-location span').addEventListener('click', () => {
+        resolve();
       });
     });
   }
 
   static draw() {
     drawSection(template);
-    Locations.chooseLocationListeners();
+    return Locations.addChooseLocationListeners();
   }
 }
 
