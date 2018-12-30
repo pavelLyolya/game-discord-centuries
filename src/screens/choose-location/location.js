@@ -25,7 +25,12 @@ class Locations {
         });
       });
       document.querySelector('.choose-location span').addEventListener('click', () => {
-        resolve();
+        if (document.querySelector('.choosed')) {
+          resolve();
+        } else {
+          document.querySelector('h2').classList.add('js-not-choosed');
+          setTimeout(() => document.querySelector('h2').classList.remove('js-not-choosed'), 1000);
+        }
       });
     });
   }
