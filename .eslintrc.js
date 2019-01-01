@@ -3,6 +3,7 @@ module.exports = {
     "globals": {
       "document": true,
       "window": true,
-      "XMLHttpRequest": true
+      "XMLHttpRequest": true,
+      "Image": true
     }
 };

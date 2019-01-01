@@ -28,10 +28,9 @@ input:focus {
   height: 60%;
 }
 canvas {
-  width: 70%;
-  height: 100%;
+  width: 600px;
+  height: 460px;
   border-radius: 6%;
-  background: rgba(202, 194, 194, 0.705);
 }
 .character .items {
   display: flex;
@@ -41,18 +40,22 @@ canvas {
   width: 30%;
   height: 50%;
 }
-.character .items img {
+.character .items .js-character-item{
   width: 110px;
   height: 100px;
   border: 1px solid transparent;
   transition-duration: 0.5s;
 }
-.character .items img:hover {
+.character .items .js-character-item:hover {
   cursor: pointer;
   width: 130px;
   height: 118px;
 }
-.choosed-character {
+.character .items .choosed-character {
   width: 130px;
   height: 118px;
+}
+.character .items .js-character-item img {
+  width: 100%;
+  height: 100%;
 }
