@@ -1,0 +1,48 @@
+#content > section.battle {
+    justify-content: space-around;
+    background-image: url(../../../dist/images/location3.png);
+    background-size: cover;
+}
+
+div.canvas-container canvas {
+    width: 1200px;
+    height: 600px;
+}
+
+.battle-state {
+    width: 100%;
+}
+
+.battle-state header, .battle-state .health {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 4rem;
+}
+
+.battle-state header span{
+    width: 33%;
+    text-align: center;
+}
+
+.battle-state header .name{
+    font-weight: 600;
+}
+
+.battle-state canvas {
+    width: 600px;
+    height: 30px;
+}
+
+#content > section.battle .span-shadow {
+    position: static;
+    text-align:center;
+}
+#content > section.battle .span-shadow span {
+    transition: 0.1s linear;
+    background: rgb(155, 5, 5);
+}
+.span-shadow span:hover {
+    box-shadow: 0 0 0 5px rgb(0, 0, 0), 0 0 0 10px rgb(155, 5, 5);
+}

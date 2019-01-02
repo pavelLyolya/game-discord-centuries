@@ -29,7 +29,7 @@ input:focus {
   width: 50%;
   height: 60%;
 }
-canvas {
+.character canvas {
   width: 600px;
   height: 460px;
   border-radius: 6%;

@@ -28,6 +28,15 @@ const config = {
           'css-loader',
         ],
       },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {},
+          },
+        ],
+      },
     ],
   },
   devtool: 'eval-sourcemap',

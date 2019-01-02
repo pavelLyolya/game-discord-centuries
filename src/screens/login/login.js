@@ -1,6 +1,7 @@
 import './login.css';
 import template from './login.template';
 
+import gameState from '../../gameState';
 import PlayerCharacter from '../../components/PlayerCharacter';
 
 import drawSection from '../../scripts/drawSection';
@@ -30,7 +31,9 @@ class Login {
         if (document.querySelector('.choosed-character')
             && document.querySelector('input').value.length > 0) {
           player.setName(document.querySelector('input').value);
+          gameState.setPlayer(player);
           console.log(player); // for debug
+          console.log(gameState); // for debug
           resolve();
         } else {
           document.querySelector('h2').classList.add('js-not-choosed');
