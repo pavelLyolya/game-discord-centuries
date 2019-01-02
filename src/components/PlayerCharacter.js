@@ -9,6 +9,10 @@ export default class PlayerCharacter {
     this.charY = charY;
   }
 
+  setName(name) {
+    this.name = name;
+  }
+
   loadImage(name, fromWhere) {
     return new Promise((resolve) => {
       this.images[name] = new Image();

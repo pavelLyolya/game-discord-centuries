@@ -1,7 +1,12 @@
 class Game {
   constructor() {
-    this.playerName = '';
+    this.player = null;
+    this.monster = null;
     this.locationName = '';
+  }
+
+  setPlayer(player) {
+    this.player = player;
   }
 
   setLocationName(name) {

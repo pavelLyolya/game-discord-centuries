@@ -27,7 +27,10 @@ class Login {
         });
       });
       document.querySelector('.login span').addEventListener('click', () => {
-        if (document.querySelector('.choosed-character')) {
+        if (document.querySelector('.choosed-character')
+            && document.querySelector('input').value.length > 0) {
+          player.setName(document.querySelector('input').value);
+          console.log(player); // for debug
           resolve();
         } else {
           document.querySelector('h2').classList.add('js-not-choosed');
@@ -40,11 +43,6 @@ class Login {
   static draw() {
     drawSection(template);
     const player = new PlayerCharacter();
-    console.log(player);
-    player.drawCharacter(
-      ['left_hand', 'foot', 'torso', 'right_hand', 'head'],
-      'soldier',
-    );
     return Login.addChooseCharacterListeners(player);
   }
 }

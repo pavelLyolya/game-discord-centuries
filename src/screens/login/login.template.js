@@ -2,7 +2,7 @@ export default `
 <section class="login">
 <h2>Choose your character</h2>
 <div class="group">
-  <input type="text" id="name" required maxlength="15" placeholder="Enter your nickname">
+  <input type="text" id="name" required maxlength="15" placeholder="Enter your nickname" autofocus>
   <div class="bar"></div>
 </div>
 <div class="character">

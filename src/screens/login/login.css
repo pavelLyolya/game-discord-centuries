@@ -11,6 +11,7 @@ input {
   font-size: 4rem;
   color: #000;
   transition: 0.3s linear;
+  box-shadow: 0 0 5px 5px rgb(155, 5, 5);
   background:rgb(155, 5, 5);
 }
 input::placeholder{
@@ -18,6 +19,7 @@ input::placeholder{
 }
 input:focus {
   outline: 0;
+  box-shadow: 0 0 13px 13px rgb(201, 8, 8);
   background:rgb(201, 8, 8);
 }
 .character {
@@ -43,17 +45,22 @@ canvas {
 .character .items .js-character-item{
   width: 110px;
   height: 100px;
-  border: 1px solid transparent;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
 }
 .character .items .js-character-item:hover {
   cursor: pointer;
   width: 130px;
   height: 118px;
+  background: rgb(201, 8, 8);
+  border-radius: 10px;
+  box-shadow: 0 0 10px 10px rgb(201, 8, 8);
 }
 .character .items .choosed-character {
   width: 130px;
   height: 118px;
+  background: rgb(201, 8, 8);
+  border-radius: 10px;
+  box-shadow: 0 0 10px 10px rgb(201, 8, 8);
 }
 .character .items .js-character-item img {
   width: 100%;
