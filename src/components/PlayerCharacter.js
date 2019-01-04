@@ -24,6 +24,23 @@ export default class PlayerCharacter {
     }
   }
 
+  drawCharHealth() {
+    if (document.querySelector('canvas#player-health')) {
+      const canvas = document.querySelector('canvas#player-health');
+      const context = canvas.getContext('2d');
+      context.fillStyle = 'red';
+      context.fillRect(0, 0, 600 * this.health / 100, 30);
+
+      context.beginPath();
+      context.lineTo(600, 0);
+      context.lineTo(600, 30);
+      context.lineTo(0, 30);
+      context.lineTo(0, 0);
+      context.closePath();
+      context.stroke();
+    }
+  }
+
   loadImage(name, fromWhere) {
     return new Promise((resolve) => {
       this.images[name] = new Image();

@@ -19,6 +19,7 @@ const startGame = async () => {
     'enemies',
   );
   monster.drawCharName();
+  monster.drawCharHealth();
   console.log(monster);
 };
 

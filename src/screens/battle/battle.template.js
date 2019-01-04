@@ -7,8 +7,8 @@ export default `
       <span class="name">Big Russian Boss</span>
     </header>
     <div class="health">
-      <canvas width="600" height="30"></canvas>
-      <canvas width="600" height="30"></canvas>
+      <canvas id="player-health" width="600" height="30"></canvas>
+      <canvas id="monster-health" width="600" height="30"></canvas>
     </div>
   </article>
   <div class="canvas-container">

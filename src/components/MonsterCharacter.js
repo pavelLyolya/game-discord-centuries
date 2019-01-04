@@ -30,6 +30,23 @@ export default class MonaterCharacter extends PlayerCharacter {
     }
   }
 
+  drawCharHealth() {
+    if (document.querySelector('canvas#monster-health')) {
+      const canvas = document.querySelector('canvas#monster-health');
+      const context = canvas.getContext('2d');
+      context.fillStyle = 'red';
+      context.fillRect(0, 0, 600 * this.health / 100, 30);
+
+      context.beginPath();
+      context.lineTo(600, 0);
+      context.lineTo(600, 30);
+      context.lineTo(0, 30);
+      context.lineTo(0, 0);
+      context.closePath();
+      context.stroke();
+    }
+  }
+
   setCoords(charX = 600, charY = 310) {
     this.charX = charX;
     this.charY = charY;
