@@ -6,7 +6,7 @@ export default `
   <div class="bar"></div>
 </div>
 <div class="character">
-    <canvas width="600px" height="460px"></canvas>
+    <canvas id="character" width="600px" height="460px"></canvas>
     <div class="items">
       <div class="js-character-item"><img src="./images/character-items/guy.png" alt="hero"></div>
       <div class="js-character-item"><img src="./images/character-items/soldier.png" alt="soldier"></div>

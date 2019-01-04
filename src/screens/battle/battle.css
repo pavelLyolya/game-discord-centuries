@@ -35,14 +35,14 @@ div.canvas-container canvas {
     height: 30px;
 }
 
-#content > section.battle .span-shadow {
+#content > section.battle .span-shadow.attack {
     position: static;
     text-align:center;
 }
-#content > section.battle .span-shadow span {
+#content > section.battle .span-shadow.attack span {
     transition: 0.1s linear;
     background: rgb(155, 5, 5);
 }
-.span-shadow span:hover {
+.span-shadow.attack span:hover {
     box-shadow: 0 0 0 5px rgb(0, 0, 0), 0 0 0 10px rgb(155, 5, 5);
 }

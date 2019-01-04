@@ -9,6 +9,11 @@ export default class PlayerCharacter {
     this.charY = charY;
   }
 
+  setCoords(charX = 70, charY = 310) {
+    this.charX = charX;
+    this.charY = charY;
+  }
+
   setName(name) {
     this.name = name;
   }
@@ -30,7 +35,7 @@ export default class PlayerCharacter {
   }
 
   async drawCharacter(arrayImageNames, fromWhere) {
-    const canvas = document.querySelector('canvas');
+    const canvas = document.querySelector('canvas#character');
     const context = canvas.getContext('2d');
 
     const x = this.charX;
@@ -38,7 +43,7 @@ export default class PlayerCharacter {
 
     const self = this;
 
-    const breathInc = 0.1;
+    const breathInc = 0.11;
     let breathDir = 1;
     let breathAmt = 0;
     const breathMax = 3;
@@ -70,7 +75,9 @@ export default class PlayerCharacter {
       }
     }
 
-    await this.loadAllImages(arrayImageNames, fromWhere);
+    if (arrayImageNames && fromWhere) {
+      await this.loadAllImages(arrayImageNames, fromWhere);
+    }
     updateBreath();
     redraw();
   }

@@ -12,9 +12,9 @@ export default `
     </div>
   </article>
   <div class="canvas-container">
-    <canvas width="1200" height="600"></canvas>
+    <canvas id="character" width="1200" height="600"></canvas>
   </div>
-  <div class="span-shadow">
+  <div class="span-shadow attack">
     <span>Attack!</span>
   </div>
 </section>
