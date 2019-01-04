@@ -18,7 +18,8 @@ const startGame = async () => {
     ['1-left-hand', '3-foot', '1-torso', '1-right-hand', '2-head'],
     'enemies',
   );
-  console.log(monster.name);
+  monster.drawCharName();
+  console.log(monster);
 };
 
 startGame();

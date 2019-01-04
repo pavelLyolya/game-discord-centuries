@@ -18,6 +18,12 @@ export default class PlayerCharacter {
     this.name = name;
   }
 
+  drawCharName() {
+    if (document.querySelector('.battle-state header span:nth-child(1)')) {
+      document.querySelector('.battle-state header span:nth-child(1)').textContent = this.name;
+    }
+  }
+
   loadImage(name, fromWhere) {
     return new Promise((resolve) => {
       this.images[name] = new Image();

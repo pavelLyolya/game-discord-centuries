@@ -9,6 +9,8 @@ class Battle {
   static draw() {
     drawSection(template);
     gameState.player.setCoords();
+    gameState.player.drawCharName();
+    console.log(gameState.player);
     gameState.player.drawCharacter();
   }
 }
