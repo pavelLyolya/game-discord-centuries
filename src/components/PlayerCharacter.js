@@ -7,6 +7,9 @@ export default class PlayerCharacter {
 
     this.charX = charX;
     this.charY = charY;
+
+    this.idUpdateBreath = 0;
+    this.idRedraw = 0;
   }
 
   setCoords(charX = 70, charY = 310) {
@@ -57,7 +60,7 @@ export default class PlayerCharacter {
     return Promise.all(arrayImagePromises);
   }
 
-  async drawCharacter(arrayImageNames, fromWhere) {
+  async drawCharacter(arrayImageNames, fromWhere, q) {
     const canvas = document.querySelector('canvas#character');
     const context = canvas.getContext('2d');
 
@@ -72,7 +75,7 @@ export default class PlayerCharacter {
     const breathMax = 3;
 
     function redraw() {
-      window.requestAnimationFrame(redraw);
+      self.idRedraw = window.requestAnimationFrame(redraw);
 
       canvas.width = canvas.width;
       context.drawImage(self.images.left_hand, x + 170, y + 95 - breathAmt);
@@ -84,7 +87,8 @@ export default class PlayerCharacter {
     }
 
     function updateBreath() {
-      window.requestAnimationFrame(updateBreath);
+      self.idUpdateBreath = window.requestAnimationFrame(updateBreath);
+
       if (breathDir === 1) {
         breathAmt -= breathInc;
         if (breathAmt < -breathMax) {
@@ -101,7 +105,7 @@ export default class PlayerCharacter {
     if (arrayImageNames && fromWhere) {
       await this.loadAllImages(arrayImageNames, fromWhere);
     }
-    updateBreath();
-    redraw();
+    this.idUpdateBreath = window.requestAnimationFrame(updateBreath);
+    this.idRedraw = window.requestAnimationFrame(redraw);
   }
 }

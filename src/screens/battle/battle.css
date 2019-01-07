@@ -21,8 +21,13 @@ div.canvas-container canvas {
     font-size: 4rem;
 }
 
-.battle-state header span{
-    width: 33%;
+.battle-state header span:nth-child(1), .battle-state header span:nth-child(3) {
+    width: 45%;
+    text-align: center;
+}
+
+.battle-state header span:nth-child(2){
+    width: 10%;
     text-align: center;
 }
 
@@ -33,6 +38,11 @@ div.canvas-container canvas {
 .battle-state canvas {
     width: 600px;
     height: 30px;
+}
+
+.health div {
+    width: 48%;
+    text-align: center;
 }
 
 #content > section.battle .span-shadow.attack {
