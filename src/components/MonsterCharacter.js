@@ -67,7 +67,7 @@ export default class MonaterCharacter extends PlayerCharacter {
     const breathMax = 3;
 
     function redraw() {
-      window.requestAnimationFrame(redraw);
+      self.idRedraw = window.requestAnimationFrame(redraw);
 
       // canvas.width = canvas.width;
       context.drawImage(self.images['1-left-hand'], x + 20, y + 34 - breathAmt, 122, 143);
@@ -79,7 +79,7 @@ export default class MonaterCharacter extends PlayerCharacter {
     }
 
     function updateBreath() {
-      window.requestAnimationFrame(updateBreath);
+      self.idUpdateBreath = window.requestAnimationFrame(updateBreath);
       if (breathDir === 1) {
         breathAmt -= breathInc;
         if (breathAmt < -breathMax) {
@@ -96,7 +96,7 @@ export default class MonaterCharacter extends PlayerCharacter {
     if (arrayImageNames && fromWhere) {
       await this.loadAllImages(arrayImageNames, fromWhere);
     }
-    updateBreath();
-    redraw();
+    this.idUpdateBreath = window.requestAnimationFrame(updateBreath);
+    this.idRedraw = window.requestAnimationFrame(redraw);
   }
 }
