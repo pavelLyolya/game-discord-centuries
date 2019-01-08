@@ -19,7 +19,7 @@ class Locations {
       locationDivs.forEach((location) => {
         location.addEventListener('click', () => {
           const locationName = location.firstElementChild.getAttribute('alt');
-          gameState.setLocationName(locationName);
+          gameState.setLocation(locationName);
           console.log(gameState); // for debug
           Locations.makeChoosed(location);
         });
