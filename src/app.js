@@ -14,10 +14,7 @@ const startGame = async () => {
   await Login.draw();
   await Battle.draw();
   const monster = new MonsterCharacter();
-  monster.drawCharacter(
-    ['1-left-hand', '3-foot', '1-torso', '1-right-hand', '2-head'],
-    'enemies',
-  );
+  monster.drawCharacter();
   monster.drawCharName();
   monster.drawCharHealth();
   console.log(monster);

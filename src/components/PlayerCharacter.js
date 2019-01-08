@@ -60,7 +60,7 @@ export default class PlayerCharacter {
     return Promise.all(arrayImagePromises);
   }
 
-  async drawCharacter(arrayImageNames, fromWhere, q) {
+  async drawCharacter(arrayImageNames, fromWhere) {
     const canvas = document.querySelector('canvas#character');
     const context = canvas.getContext('2d');
 
