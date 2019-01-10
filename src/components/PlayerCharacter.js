@@ -3,6 +3,8 @@ export default class PlayerCharacter {
     this.health = 100;
     this.name = '';
 
+    this.attackType = '';
+
     this.images = {};
 
     this.charX = charX;
@@ -64,10 +66,13 @@ export default class PlayerCharacter {
     const canvas = document.querySelector('canvas#character');
     const context = canvas.getContext('2d');
 
-    const x = this.charX;
-    const y = this.charY;
-
     const self = this;
+    if (this.idRedraw) {
+      window.cancelAnimationFrame(this.idRedraw);
+    }
+    if (this.idUpdateBreath) {
+      window.cancelAnimationFrame(this.idUpdateBreath);
+    }
 
     const breathInc = 0.11;
     let breathDir = 1;
@@ -78,12 +83,13 @@ export default class PlayerCharacter {
       self.idRedraw = window.requestAnimationFrame(redraw);
 
       canvas.width = canvas.width;
-      context.drawImage(self.images.left_hand, x + 170, y + 95 - breathAmt);
-      context.drawImage(self.images.foot, x + 145, y + 195);
-      context.drawImage(self.images.torso, x + 66, y + 110 - breathAmt * 0.5);
-      context.drawImage(self.images.foot, x + 30, y + 195);
-      context.drawImage(self.images.right_hand, x + 10, y + 109 - breathAmt);
-      context.drawImage(self.images.head, x - 37, y - 138 - breathAmt * 1.5, 309, 270);
+      context.drawImage(self.images.left_hand, self.charX + 170, self.charY + 95 - breathAmt);
+      context.drawImage(self.images.foot, self.charX + 145, self.charY + 195);
+      context.drawImage(self.images.torso, self.charX + 66, self.charY + 110 - breathAmt * 0.5);
+      context.drawImage(self.images.foot, self.charX + 30, self.charY + 195);
+      context.drawImage(self.images.right_hand, self.charX + 10, self.charY + 109 - breathAmt);
+      context.drawImage(self.images.head, self.charX - 37, self.charY - 138 - breathAmt * 1.5,
+        309, 270);
     }
 
     function updateBreath() {

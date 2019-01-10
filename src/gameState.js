@@ -2,6 +2,8 @@ import location1 from '../dist/images/location1.png';
 import location2 from '../dist/images/location2.png';
 import location3 from '../dist/images/location3.png';
 
+import MonsterCharacter from './components/MonsterCharacter';
+
 class Game {
   constructor() {
     this.player = null;
@@ -25,7 +27,7 @@ class Game {
         this.location = location3;
         break;
       default:
-        console.log('hehehehehehe');
+        console.log('location not defined');
         break;
     }
   }
@@ -33,5 +35,8 @@ class Game {
 
 const gameState = new Game();
 // Object.freeze(gameState);
+
+const monster = new MonsterCharacter();
+gameState.monster = monster;
 
 export default gameState;

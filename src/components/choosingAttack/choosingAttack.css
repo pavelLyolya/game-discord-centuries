@@ -1,0 +1,27 @@
+.modal section {
+    width: 100%;
+    height: 100%;
+}
+.modal .weapon-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.modal .weapon-items .js-weapon-item{
+    width: 320;
+    height: 100px;
+    transition-duration: 0.3s;
+}
+.modal .weapon-items .js-weapon-item:hover {
+    cursor: pointer;
+    background: rgb(201, 8, 8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 10px rgb(201, 8, 8);
+}
+.modal .weapon-items .js-weapon-item img {
+    width: 100%;
+    height: 100%;
+}

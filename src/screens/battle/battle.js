@@ -2,8 +2,10 @@ import './battle.css';
 import template from './battle.template';
 
 import gameState from '../../gameState';
-import MonsterCharacter from '../../components/MonsterCharacter';
 import drawSection from '../../scripts/drawSection';
+import updateModal from '../../scripts/updateModal';
+
+import choosingAttack from '../../components/choosingAttack/choosingAttack';
 
 class Battle {
   static draw() {
@@ -20,13 +22,17 @@ class Battle {
     gameState.player.drawCharHealth();
     console.log(gameState.player);
 
-    const monster = new MonsterCharacter();
-    monster.drawCharacter();
-    monster.drawCharName();
-    monster.drawCharHealth();
-    gameState.monster = monster;
-    console.log(monster);
+    gameState.monster.drawCharacter();
+    gameState.monster.drawCharName();
+    gameState.monster.drawCharHealth();
     console.log(gameState);
+
+    document.querySelectorAll('.trigger').forEach((elem) => {
+      elem.addEventListener('click', () => {
+        updateModal(choosingAttack.header, choosingAttack.template);
+        document.querySelector('.modal-wrapper').classList.toggle('open');
+      });
+    });
   }
 }
 

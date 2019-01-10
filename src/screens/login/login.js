@@ -31,10 +31,6 @@ class Login {
         if (document.querySelector('.choosed-character')
             && document.querySelector('input').value.length > 0) {
           player.setName(document.querySelector('input').value);
-
-          window.cancelAnimationFrame(player.idUpdateBreath);
-          window.cancelAnimationFrame(player.idRedraw);
-
           gameState.setPlayer(player);
           console.log(player); // for debug
           console.log(gameState); // for debug
